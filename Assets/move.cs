@@ -40,6 +40,5 @@ public class move : MonoBehaviour
         }
         
         controller.Move(mov * Time.deltaTime * speed);
-
     }
 }
