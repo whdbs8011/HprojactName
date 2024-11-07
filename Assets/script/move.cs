@@ -21,6 +21,7 @@ public class move : MonoBehaviour
         controller = GetComponent<CharacterController>();
         mov = Vector3.zero;
         gravity = 10f;
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
