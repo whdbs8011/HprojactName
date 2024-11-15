@@ -21,7 +21,7 @@ public class Key : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("플레이어와 충돌했습니다!");
+            Debug.Log("열쇠를 얻었습니다.");
             Destroy(GameObject.FindGameObjectWithTag("Key"));
         }
     }
