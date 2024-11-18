@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: c66a7ce9d307f4be9a2d5655466c4591
   - enabled: 1
     path: Assets/Scenes/StartRoom.unity
-    guid: 832fd0fe08d7a40f989ab45b64c2c14e
+    guid: 8005adf59217440a8a586286ed88af83
   - enabled: 1
     path: Assets/Scenes/flat.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab

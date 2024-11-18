@@ -13,6 +13,6 @@ public class JumpSqure : MonoBehaviour
 
     void scene()
     {
-        SceneManager.LoadScene("Scenes/SampleScene 1");
+        SceneManager.LoadScene("Scenes/flat even");
     }
 }

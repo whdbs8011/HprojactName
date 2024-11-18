@@ -13,6 +13,6 @@ public class JumpSqure2 : MonoBehaviour
 
     void scene()
     {
-        SceneManager.LoadScene("Scenes/SampleScene 2");
+        SceneManager.LoadScene("Scenes/sky block");
     }
 }
