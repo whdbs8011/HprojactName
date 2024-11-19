@@ -1,7 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
 using UnityEngine;
 using UnityEngine.WSA;
+using Object = UnityEngine.Object;
 
 public class move : MonoBehaviour
 {
@@ -11,8 +14,9 @@ public class move : MonoBehaviour
     private CharacterController controller;
     private Vector3 mov;
     
-
     private float mouseX;
+
+    private static move Instance;
 
 
     // Start is called before the first frame update
@@ -22,6 +26,16 @@ public class move : MonoBehaviour
         mov = Vector3.zero;
         gravity = 10f;
         DontDestroyOnLoad(gameObject);
+        if (Instance != this && Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     // Update is called once per frame
@@ -40,6 +54,7 @@ public class move : MonoBehaviour
             mov.y -= gravity * Time.deltaTime;
         }
         
-        controller.Move(mov * Time.deltaTime * speed);
+        controller.Move(mov * (Time.deltaTime * speed));
     }
 }
+

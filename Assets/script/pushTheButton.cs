@@ -44,18 +44,5 @@ public class pushTheButton : MonoBehaviour
             ExitCollising();
         }
     }
-
-
-    // private void OnCollisionStay(Collision collision)
-    // {
-    //     if (collision.gameObject.CompareTag("Player"))
-    //     {
-    //         Debug.Log("버튼을 누를수 있습니다.");
-    //         if (Input.GetKeyDown(KeyCode.E))
-    //         {
-    //             SceneManager.LoadScene("Scenes/flat");
-    //         }
-    //     }
-    // }
 }
 
