@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
+using Unity.Properties;
 using UnityEngine;
 using UnityEngine.WSA;
 using Object = UnityEngine.Object;
@@ -18,6 +19,20 @@ public class move : MonoBehaviour
 
     private static move Instance;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+        if (Instance)
+        {
+            DestroyImmediate(this.gameObject);
+            return;
+        }
+        
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+        
+    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,17 +40,7 @@ public class move : MonoBehaviour
         controller = GetComponent<CharacterController>();
         mov = Vector3.zero;
         gravity = 10f;
-        DontDestroyOnLoad(gameObject);
-        if (Instance != this && Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
+  
     }
 
     // Update is called once per frame
