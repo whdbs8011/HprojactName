@@ -19,20 +19,6 @@ public class move : MonoBehaviour
 
     private static move Instance;
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-        if (Instance)
-        {
-            DestroyImmediate(this.gameObject);
-            return;
-        }
-        
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-        
-    }
-
 
     // Start is called before the first frame update
     void Start()
